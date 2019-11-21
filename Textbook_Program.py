@@ -8,4 +8,5 @@ class Person:
         self.first = first_name
         self.last = last_name
         self.age = age
-        pass
+   
+    #You also need a method to return the details of a Person
