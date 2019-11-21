@@ -25,9 +25,3 @@ class Textbook(Person):
             return subtracting_inv
         elif add:
             return adding_inv
-
-
-
-
-
-
