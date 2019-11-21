@@ -4,11 +4,12 @@
 
 from Textbook_Program import Person
 
-
-class Textbook(Person):
-    def __init__(self,title, author, edition, isbn_number, publisher, year_published, inventory, price):
+#there is no inheritance, think back to the is-a relationship and you will see that this does not fit.
+class Textbook():
+    def __init__(self,title, first, last, age, edition, isbn_number, publisher, year_published, inventory, price):
         self.title = title
-        super(Person).__init__(first_name=author, last_name=author, age=author)
+        #what we are doing is saying that the Textbook has an author that is a person, so make a Person object
+        self.author = Person(first, last, age)
         self.edition = edition
         self.isbn = isbn_number
         self.publisher = publisher
@@ -16,12 +17,8 @@ class Textbook(Person):
         self.inventory = inventory
         self.price = price
 
-    def __init__subclass(self, add, subtract):
-        self.add = add
-        self.subtract = subtract
-        adding_inv = self.inventory + 1
-        subtracting_inv = self.inventory - 1
-        if subtract:
-            return subtracting_inv
-        elif add:
-            return adding_inv
+    #thisis to add to inventory, you also need one to remove.  Not the same process to remove, but similar    
+    def add_to_inventory(self, quantity)
+        self.inventory = self.inventory + quantity
+        
+#What other methods?  Think about what you need for the project.
